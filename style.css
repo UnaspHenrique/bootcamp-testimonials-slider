@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+@media screen and (max-width: 425px){
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: url(./images/pattern-curve.svg) no-repeat;
+        background-position: bottom left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 41px;
+    }
+
+    .container {
+        background: url(./images/pattern-bg.svg) no-repeat;
+        background-size: 100%;
+        background-position: top;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .first-part {
+        padding-top: 90px;
+        background: url(./images/pattern-quotes.svg) no-repeat;
+        background-position: 120px 62px;
+        background-size: 20%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .first-part .main-text {
+        color: var(--Dark-Blue);
+        margin-bottom: 20px;
+    }
+
+    .first-part .description {
+        color: var(--Dark-Blue);
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-part .description span {
+        color: var(--Grayish-Blue);
+        font-weight: 500;
+    }
+
+    .icons {
+        width: 85%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 27px;
+        height: 260px;
+    }
+
+    .second-part {
+        box-shadow: 0 10px 50px hsla(240, 37%, 20%, 0.527);
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .second-part .image {
+        width: 100%;
+    }
+
+    #prev,
+    #next {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 30px 0px 0px 30px;
+        height: 40px;
+        width: 44px;
+        bottom: -20px;
+        left: 35%;
+        transition: .4s ease-in-out;
+    }
+
+    #next {
+        left: 50%;
+        border-radius: 0px 30px 30px 0px;
+    }
+}
+
+@media screen and (min-width: 426px) {
+    body {
+        background: url(./images/pattern-curve.svg) no-repeat;
+        background-position: bottom left;
+        font-size: 32px;
+        min-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        background: url(./images/pattern-bg.svg) no-repeat;
+        background-position: 698px 158px;
+        max-width: 1440px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .first-part {
+        background: url(./images/pattern-quotes.svg) no-repeat;
+        background-position: 162px 53px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 500px;
+        z-index: 1;
+    }
+
+    .first-part .main-text {
+        color: var(--Dark-Blue);
+        position: relative;
+        margin-bottom: 40px;
+        font-weight: 300;
+        max-width: 633px;
+        width: 100%;
+        left: 67px;
+    }
+
+    .first-part .description {
+        position: relative;
+        color: var(--Dark-Blue);
+        font-weight: 700;
+        font-size: 20px;
+        left: 67px;
+    }
+
+    .first-part .description span {
+        color: var(--Grayish-Blue);
+        font-weight: 500;
+    }
+
+    .icons {
+        position: relative;
+        box-shadow: 0 10px 50px hsla(240, 37%, 20%, 0.527);
+    }
+
+    .second-part {
+        max-width: 540px;
+        display: flex;
+        scroll-behavior: smooth;
+        position: relative;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .second-part .image {
+        max-width: 540px;
+        width: 100%;
+    }
+
+    #prev,
+    #next {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 30px 0px 0px 30px;
+        height: 50px;
+        width: 55px;
+        bottom: -25px;
+        left: 70px;
+        z-index: 3;
+        transition: .4s ease-in-out;
+    }
+
+    #prev:hover,
+    #next:hover {
+        filter: brightness(.9);
+        transition: .4s ease-in-out;
+    }
+
+    #next {
+        left: 125px;
+        border-radius: 0px 30px 30px 0px;
+    }
+}
